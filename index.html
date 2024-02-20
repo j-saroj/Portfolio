@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saroj Joshi</title>
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .txt-col {
+      color: #3d3c3c;
+    }
+
+    body {
+      background-color: #f1f1f1;
+      margin-left: 20%;
+      margin-right: 50px;
+
+
+    }
+
+    .nav {
+      width: 20%;
+      height: 100vh;
+      background-color: white;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      left: 0;
+      top: 0;
+    }
+
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      align-items: center;
+      margin: 80px 20px 0 0;
+      background-color: white;
+    }
+
+    .list {
+      text-align: center;
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .navbar .list a {
+      width: 25px;
+      height: 25px;
+      margin: 0 10px;
+      font-weight: 600;
+    }
+
+    .navbar .list a.active {
+      color: blue;
+    }
+
+    .navbar .list a:hover {
+      color: blue;
+      transition: 0.5s ease;
+    }
+
+    .navbar .list img {
+      width: 18px;
+      height: 18px;
+    }
+
+
+    .list a {
+      text-decoration: none;
+      font-size: 20px;
+      color: black;
+      font-weight: 500;
+      text-align: center;
+    }
+
+
+
+    .logo {
+      width: 100%;
+      height: 100px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      font-weight: 800;
+    }
+
+    .logo a {
+      text-decoration: none;
+      font-size: 30px;
+      font-weight: 700;
+      color: #000;
+      font-family: "Lucida Handwriting", cursive;
+    }
+
+
+
+    .home-sci {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .nav .home-sci {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .home-sci a {
+      font-size: 24px;
+      margin: 0 10px;
+      color: blue;
+      transition: 1s;
+    }
+
+    .home-sci a:hover {
+      color: rgb(40, 158, 255);
+    }
+
+    .container {
+      background-color: #f1f1f1;
+      display: flex;
+      height: 100vh;
+      padding-right: 20px;
+    }
+
+    .content {
+      width: 60%;
+      height: 100%;
+      padding: 150px 0 0 50px;
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+    }
+
+    .content h1 {
+      font-size: 30px;
+      margin-top: 20px;
+      font-weight: 500;
+      color: #000;
+    }
+
+    .content h1 span {
+      font-weight: 600;
+      letter-spacing: 1x;
+      font-size: 40px;
+      animation: col 4s infinite;
+
+
+    }
+
+
+
+    @keyframes col {
+      0% {
+        color: rgb(20, 20, 250);
+      }
+
+      25% {
+        color: orangered;
+
+      }
+
+      50% {
+        color: red;
+      }
+
+      100% {
+        color: rgb(20, 20, 250);
+
+      }
+    }
+
+    .content p {
+      font-size: 20px;
+      margin-top: 20px;
+      color: rgb(98, 98, 98);
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      font-size: 20px;
+      color: #fff;
+      background-color: blue;
+      font-weight: 500;
+      padding: 10px 20px;
+      border: 1px solid #f1f1f1;
+      border-radius: 20px;
+      transition: 0.5s ease;
+      margin: 0 10px;
+    }
+
+    .buttons a:hover {
+      color: blue;
+      background-color: #fff;
+      border: 1px solid blue;
+    }
+
+    .photo {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .photo img {
+      width: 80%;
+      height: 50%;
+      border: solid blue;
+      border-radius: 15px 100px;
+    }
+
+    hr {
+      width: 100%;
+      border: 3px solid rgba(0, 0, 255, 0.564);
+
+    }
+
+    .about-content {
+      width: 100%;
+      height: 100%;
+      padding: 50px 0 0 50px;
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 40%;
+    }
+
+    .details .info,
+    .details .info1 {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      padding: 30px 0 0 0;
+    }
+
+    .about {
+      padding-right: 20px;
+    }
+
+    .about-me {
+      font-size: 40px;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #3d3c3c;
+    }
+
+    .about-sub-head {
+      font-size: 30px;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #3d3c3c;
+    }
+
+    .mail {
+      width: 100%;
+
+    }
+
+    .mail a {
+      text-decoration: none;
+      color: #fff;
+      background-color: rgba(0, 0, 255, 0.591);
+      font-weight: 600;
+
+      padding: 10px 20px;
+      border: 1px solid #f1f1f1;
+      border-radius: 20px;
+      transition: 0.5s ease;
+
+    }
+
+    .mail a:hover {
+      color: rgba(0, 0, 255, 0.454);
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 255, 0.454);
+    }
+
+    p {
+      color: rgb(98, 98, 98);
+    }
+
+    .skills {
+      display: flex;
+      width: 100%;
+      padding: 30px 0 0 0;
+    }
+
+    .skills h1 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #3d3c3c;
+    }
+
+    .skills1,
+    .skills2 {
+      width: 50%;
+    }
+
+
+
+    .mail {
+      width: 10%;
+      height: 40px;
+      text-align: center;
+    }
+
+
+
+    .lang-heading {
+      font-size: 25px;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #3d3c3c;
+    }
+
+    .education-experience {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .edu-exp-content {
+      display: flex;
+      align-items: center;
+      background-color: white;
+    }
+
+    .education,
+    .experience {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    }
+
+
+    .services {
+      padding: 20px 0 0 50px;
+
+    }
+
+    .services-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-gap: 30px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .ser {
+      background-color: rgb(255, 255, 255);
+      padding: 10px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      transition: 0.3s ease-in-out;
+    }
+
+    .ser:hover {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9);
+      cursor: pointer;
+
+    }
+
+    .ser img {
+      transition: 0.5s ease-in-out;
+
+    }
+
+    .ser:hover img {
+      transform: scale(1.3);
+      overflow: hidden;
+    }
+
+    .contact {
+      padding: 30px 0 0 50px;
+    }
+
+    .contact-text {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .contact-text h2 {
+      color: blue;
+    }
+
+    .contact-options {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .contact-text h5 {
+      color: rgb(98, 98, 98);
+    }
+
+    .contact-text div {
+      color: rgb(98, 98, 98);
+      margin: 10px;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .form {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .form input {
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid rgb(98, 98, 98);
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .form textarea {
+      width: 100%;
+      max-width: 100%;
+      height: 100px;
+      border-radius: 5px;
+      border: 1px solid rgb(98, 98, 98);
+      margin: 10px;
+      padding: 10px;
+    }
+
+    .form input[type="submit"] {
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid rgb(98, 98, 98);
+      margin: 10px;
+      padding: 10px;
+      background-color: rgb(62, 62, 201);
+      color: white;
+      transition: 0.3s ease-in-out;
+    }
+
+    .form input[type="submit"]:hover {
+      background-color: rgb(73, 73, 226);
+    }
+
+    .portfolio {
+      padding: 30px 0 0 50px;
+    }
+
+    .port {
+      background-color: rgb(255, 255, 255);
+      padding: 10px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.4);
+      border-radius: 5px;
+      transition: 0.3s ease-in-out;
+    }
+
+    .port img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    @media only screen and (max-width: 1200px) {
+
+      .photo {
+        display: none;
+      }
+
+      .content {
+        width: 100%;
+
+      }
+
+
+    }
+
+    @media only screen and (max-width: 800px) {
+
+      .nav .home-sci {
+        display: none;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .menu {
+        cursor: pointer;
+      }
+
+      .bd {
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        margin-left: 0;
+        padding-right: 0;
+      }
+
+      .nav {
+        width: 100%;
+        height: 50px;
+        position: sticky;
+        display: flex;
+        justify-content: space-between;
+        top: 0;
+      }
+
+      .navbar {
+        margin: 0;
+        display: none;
+      }
+
+
+      .photo img {
+        display: none;
+      }
+
+
+      .navbar .list {
+        display: flex;
+        justify-content: center;
+      }
+
+      .logo {
+        margin-top: 0;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .list {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+      }
+
+
+      .about {
+        width: 100%;
+        margin-left: 0;
+        padding-right: 0;
+      }
+
+      .about-content {
+        padding: 20px;
+      }
+
+      .services {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      .contact {
+        padding: 20px;
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .contact-options {
+        flex-direction: column;
+      }
+
+      .contact-text {
+        margin-bottom: 20px;
+      }
+
+      .contact .txt-col h1 {
+        text-align: center;
+      }
+
+      .portfolio {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+      }
+
+      .portfolio .txt-col h1 {
+        text-align: center;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="logo">
+      <a href="#">SAROJ</a>
+      <div class="menu" id="Menu" onclick="showMenu()">
+        <div class="bd"></div>
+        <div class="bd"></div>
+        <div class="bd"></div>
+      </div>
+    </div>
+
+    <ul class="navbar" id="NAVBAR">
+      <li class="list"><img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAXhJREFUSEvt1r8vBEEUwPHvNSg0qgsKOv+ATnWFRqUUkVAT/gXuT5AIpYQEnVJUKn+AVkXhRynRSBTsS2bkGbNm3ljZ5rbZu828/bz3dvbddWjp6LTkUgpL3LJL+gT4sBZQAkuMYEsOO3NJmHArHKK+UDNugWXtEbDitHt3nnLnY2A1t+25cFjpAzDnwGtg0tr2HLgO1RWb8RScQv0zlnab8N/gXLQIr4OtqBmPwaWoCQ/hv6LZuIZjw6Ff3WnHOg7deonbVrHfhoyGZTDIENBHk7DcV+b7qXzQ8CJw/s/wAnARwvJ9BhgHrlwCuuIhYLN6X+eBkSDBN+AS2APeI63uAY9Vxbc+ru518r80Gj4E1hLPex/YiMA/HAv8CowCMirvggSmAZleL8BY03CsC97XO9gXE7v2la+l4gGsH/Og1dKNos31DHQLZ3QY9gRMhBfrdvVW9T7uNgSvV0Uc5MKybtaNx+HCBGSMyly+icWn/nMVmumw1uBPg+qCH2ApKdYAAAAASUVORK5CYII=" /><a
+          class="active" href="#">Home</a></li>
+      <li class="list"><img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA5dJREFUSEvFl2fIjlEYx3+vUVayR8kmMj4oq5RVilCSlS1kU1JEyhaSlcjKKDtkfjCysks+oGTvnVlknX9dt85zO89zP4/eeq8v73nOfc71P9d1/ud/XW8eBWR5BYRLrsCFgVZATaCqHfoZcB+4DPzMNpBsgesB04AeQJk0zt8C+4AFwL2kAyQBlwAWAmMARZuNfQcWA7MBjYOWCbgGcBhoFNj5GVAW5PgOUC6w5grQ1R36VQg5HXBD4Jzn8DRwAxhvTsYCq23cF9huY83VBTrZ76dAa+BxHDwEXAXQaasBv4HhwEbgFtDA7k/R/jJn8nEdaArctAwNAja5dBeyOYF/9MFDwDvd4t4GOhjYCjQDrtnG0cCaWAR+1G2BM+4K+rvot9m65cCkTMBNLKVas8Gi1XiWi3Am8AMoC+iOfSsGvHdE1N8dQD/7KB/D3Iv4BtQCnkeb4hFvdqlUmgRQx216ZAtPAe0sEkUUsl1AL+ATUNoWiKB37UXMB6aHgIsC74BSwEGgu3eHX4DiQMrmGPo4YKXNSVxe2Fgvo4uxv34IuCNw3D6IvatsXAl4meF+I1/+/g6AsiSb6ERnmY0FrOeXIplDjIma171IBmW6G7FaNgM4nybVOqCIKVtiGqCxwNbafDfgUBx4CrAojdP8mhazxfCUiCfbSfMLJORHGEvjwP5b9FNd3aVbbJfNAU6mOVkFJx67A6mubU9Tn/oAYn9KxCp3F2yj1EpvUFYeeGNjXYfuL2RtgLP2obMrn8c8X+ts3Nzp99U4sKqPnoBOrghFtmjNVxMHabF0OmRDPRKKkA9sUaQNqtuRDP/TCIh9I02ZlKLXtlmZUEak4S3SAEtaB9geMVxW2QSkpL3xCdHeuHKJ+rftCtYDI2zhCqtM6jDUCMQlU37UCEhOdYe6S5kKhTKngiIljLIQbH0k7BJ4meRTkfjioAISkSgKQCp3wH5Ip6XXA4EtNqdMjvIzFapOFa1/Ul+lk+r0+023JYWXLO2+HzG9vem01qge77GyqHKqsvghCVjfVW8veo3AEbs7lUmZtPeojSWPJ2ysNIukPe23CNXSVbkncV5kan0UsYpF4wCZ5FBdikBU/NU8xE31WxL5txRmE3G0Rmyc66qW2KhuIhtTH6YGcd7/Nns+iFqeqdbeRrU2fgixeq+VzodJJ0xqb+P7ixhRJKN+Q69irzce9WFJuDn/J5HoMNsFuUacrd/EdX8AF1i0Hzzzo+MAAAAASUVORK5CYII=" /><a
+          href="#about">About</a></li>
+      <li class="list"><img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAQBJREFUSEvtllsKwjAQRU9diK+NqEsQEcEPdSW+ViL4QMQPd6BuxNdGtCMNxKA20JGKNlAKSXPPzJ00TEBKI0iJy1eBC0BJ2YkjcLY17YxzwAJoKUON3BToAleZsMFtYP4hqJGtAxsX3A8DGUVf1JQD2EZ6A2DsgoehDbLgzvvEUAXkkSE6PaAYvk/he2LsjRKT9Qerk4DdvTugAuyjgO51/SlwXDm8MxaLNIfY7mW1JtTWkr/m7eFKLWPtO9y7xhk46WHLrFa7q+NKkVn9YHVqjYD0Wsu4YiVcbwJrtxGQZm8FNBKKv9o+AzrPmj2zoQzkleEH4GJrat/J3vH+H/gGhYZMH8vVi5cAAAAASUVORK5CYII=" /><a
+          href="#services">Services</a></li>
+      <li class="list"><img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAaFJREFUSEvFl88rBVEUxz9P+bUTVpKsFWWjRKz8B8pKNhZixdYCZc9OskGyY8XGxkLZWUiSrBQlv4p/gHvqTo1p7tx75s2YU1PvzZt7Pud77jln7qtRkdUq4pIFHgHGgOaCgvsE9oAv8ecCrwIrBQHjbuaBrSzwO9BRAnjN+BRRTsU/JUDFZSHgY+AEeAMGgSWgzRNw3eBFA9lMQDqBa6ArA54K7gXkEjvPWHwDDDh+nwb2teDQSpaqlOpMM1H7XBZ4G5hzOG8HPrTg0FTfAv2mz9Mqfxi41ILjz/vaSSp4IwFoBc6AUS04VHHk9wg4NWl/sRlYAHrytFNocdUzW1LbqTJwaKrvgEPgCpDPMtf7bLrHzb0poMmRllyT69uMR9nHA0+uZZ9liEgQSVNPrlf7br4P3OAGMwV3AZlkcVPv8aRJpVSxxlqAB6A7tkgFfrJt4uvttKCWgXUf2FVcFzbNGrXRsxN2qETfVcX1aPcrD1jEzPgUa0ZmniBkjUpxXkjaOi+4ssPeDjBbpFTry3u8bbSVPPTfB/oSxP51Wdl/p19hb10fnjDZeQAAAABJRU5ErkJggg==" /><a
+          href="#contact">Contact</a></li>
+      <li class="list"><img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAS9JREFUSEvNlzsOwjAMhj8eV2Bn5xZwAhALIxILHILXJRCImYUBbgCXYGfnDDxq1EihapsEGdpIkara8mc7fyO3QkGrUhCXUoEbQEu5ExfgZse0K64CW2CoDDXh1sAYeMoLGzwAdj+CmrA94JAET6NEFsAD6CgncIrjzYBlEjyP2iCGO1BXBr/bGxcmnI9Wp4GbgOysdY4NaX5XQLasYLBJJgtsNJLmJ8f2rq70YBFXLc7Ut2KVVn8DdmnR64y/ARdWsYq4pC1yfcryPWN18F+/Y7til2h87V7issGuivPAwTeXfZW6zjgPHHxzlQJcWKt9xePyyxWXGQTEqe2KFGjPHQT60ZC3DwwY6t4FjraIzPMGGIVG8/RfARPjmzZX/3289Uxcx61UfxI6JTmivADNW3IfL939iAAAAABJRU5ErkJggg==" /><a
+          href="#portfolio">Portfolio</a></li>
+    </ul>
+    <div class="home-sci">
+      <a href="https://www.facebook.com/profile.php?id=100071544116248" class="bx bxl-facebook-circle"></a>
+      <a href="" class="bx bxl-instagram-alt"></a>
+      <a href="" class="bx bxl-twitter"></a>
+      <a href="" class="bx bxl-linkedin"></a>
+    </div>
+  </div>
+
+  <div class="container" id="Container">
+    <div class="content">
+      <h1>Hello, my Name is <span>Saroj Joshi</span></h1>
+      <h1>I am a.....</h1>
+      <p>
+        I'm a web Designer with experience for over 2 years. My expertise is
+        to create and website design, graphic design, and many more...
+      </p>
+      <br /><br />
+      <div class="buttons">
+        <a href="#">Hire Me</a>
+        <a href="#">Download CV</a>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="/Capture.PNG" alt="" />
+    </div>
+  </div>
+  <div class="about" id="about">
+    <div class="about-content">
+      <h1 class="about-me"><u>About Me</u></h1>
+      <br /><br />
+      <br />
+      <h1 class="about-sub-head txt-col">
+        I'm Saroj Joshi, a web developer.
+      </h1>
+      <br />
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem quas
+        tempore est eaque aspernatur sequi ipsum officiis provident saepe,
+        commodi unde dignissimos, mollitia, odio sit! Qui consequatur dolor
+        tenetur nam. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Eligendi, impedit neque veritatis laborum, dolore, distinctio eos
+        blanditiis ducimus ipsa quis error modi harum molestiae quo sit
+        molestias quae iusto dicta!
+      </p>
+      <div class="details">
+        <div class="info">
+          <p><strong>Birthday: </strong> 2062/06/21</p>
+          <br />
+          <p><strong>Age: </strong> 21</p>
+          <br />
+          <p><strong>City: </strong> Kathmandu</p>
+          <br />
+          <p><strong>Study: </strong> Bsc.CSIT</p>
+          <br />
+        </div>
+        <div class="info1">
+          <p><strong>Freelance: </strong> Available</p>
+          <br />
+          <p><strong>Phone: </strong> 9860303030</p>
+          <br />
+          <p><strong>Email: </strong>joshisaroj431@gmail.com</p>
+          <br />
+          <p><strong>Website: </strong>www.sarojjoshi@gmail.com</p>
+        </div>
+      </div>
+      <br />
+      <div class="mail">
+        <a href="mailto:joshisaroj431@gmail.com">Mail me</a>
+      </div>
+      <br /><br /><br />
+      <h1 class="lang-heading">Programming Languages:</h1>
+      <div class="skills">
+        <div class="skills1">
+          <p>HTML</p>
+          <br />
+          <p>CSS</p>
+          <br />
+          <p>JavaScript</p>
+          <br />
+          <p>PHP</p>
+          <br />
+        </div>
+        <div class="skills2">
+          <p>C</p>
+          <br />
+          <p>C++</p>
+          <br />
+          <p>Python</p>
+          <br />
+          <p>Java</p>
+          <br />
+        </div>
+      </div>
+      <br /><br /><br />
+      <div class="education-experience txt-col">
+        <h1>Education</h1>
+        <h1>Experience</h1>
+      </div>
+      <br /><br /><br />
+      <div class="edu-exp-content txt-col">
+        <div class="education">
+          <div class="ed1">
+            <h3>SEE</h3>
+            <p>2016-2017</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+              saepe! Error maxime vel minus distinctio reiciendis dolorum
+              dolor, esse voluptate illum enim nam. Fugit, dicta quisquam.
+              Nisi placeat sit laborum necessitatibus possimus, hic pariatur
+              eveniet architecto dicta, velit deserunt, incidunt ad quos
+              autem. Dolore veritatis a quae quis adipisci quidem!
+            </p>
+          </div>
+          <br />
+          <hr>
+          <div class="ed2">
+            <h3>+2</h3>
+            <p>2017-2019</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+              saepe! Error maxime vel minus distinctio reiciendis dolorum
+              dolor, esse voluptate illum enim nam. Fugit, dicta quisquam.
+              Nisi placeat sit laborum necessitatibus possimus, hic pariatur
+              eveniet architecto dicta, velit deserunt, incidunt ad quos
+              autem. Dolore veritatis a quae quis adipisci quidem!
+            </p>
+          </div>
+          <br />
+          <hr>
+          <div class="ed3">
+            <h3>Bsc.CSIT</h3>
+            <p>2019-2023</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+              saepe! Error maxime vel minus distinctio reiciendis dolorum
+              dolor, esse voluptate illum enim nam. Fugit, dicta quisquam.
+              Nisi placeat sit laborum necessitatibus possimus, hic pariatur
+              eveniet architecto dicta, velit deserunt, incidunt ad quos
+              autem. Dolore veritatis a quae quis adipisci quidem!
+            </p>
+          </div>
+        </div>
+        <div class="experience">
+          <div class="exp1">
+            <h3>Web Designer</h3>
+            <p>2019-2020</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+              saepe! Error maxime vel minus distinctio reiciendis dolorum
+              dolor, esse voluptate illum enim nam. Fugit, dicta quisquam.
+              Nisi placeat sit laborum necessitatibus possimus, hic pariatur
+              eveniet architecto dicta, velit deserunt, incidunt ad quos
+              autem. Dolore veritatis a quae quis adipisci quidem!
+            </p>
+          </div>
+          <br />
+          <hr>
+          <div class="exp2">
+            <h3>Web Developer</h3>
+            <p>2020-2021</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+              saepe! Error maxime vel minus distinctio reiciendis dolorum
+              dolor, esse voluptate illum enim nam. Fugit, dicta quisquam.
+              Nisi placeat sit laborum necessitatibus possimus, hic pariatur
+              eveniet architecto dicta, velit deserunt, incidunt ad quos
+              autem. Dolore veritatis a quae quis adipisci quidem!
+            </p>
+          </div>
+          <br />
+          <hr>
+          <div class="exp3">
+            <h3>Web Designer</h3>
+            <p>2021-2022</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo,
+              saepe! Error maxime vel minus distinctio reiciendis dolorum
+              dolor, esse voluptate illum enim nam. Fugit, dicta quisquam.
+              Nisi placeat sit laborum necessitatibus possimus, hic pariatur
+              eveniet architecto dicta, velit deserunt, incidunt ad quos
+              autem. Dolore veritatis a quae quis adipisci quidem!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="services" id="services">
+    <div class="services-content txt-col">
+      <h1>Services</h1><br>
+
+    </div>
+    <div class="services-grid">
+      <div class="ser">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVdJREFUSEvtljFKBEEQRd9mhiYiCKKZoSDmaqDX0FAM9AjqDTQSMz2FGKknEDNDBUExMjTT/dAlte3OVrcMDMgMDMvOfv7rrvpTvQM6ugYdcakFrwBbwFS24E/gGrgv3UgN+AA4CYx3gfMSeA34HZgJTF+A+bbBX8nwePh5lJnr+2F6VrSZIlEy7MG+2v+z1G/AbJDYV2Cu7VTvA6eB6d5wcWdtg+W3CmwCS8B2AlwCj8AV8FAClabmdfKe68BNerAB3JYCTdeDrRJR6aaB5SRWXz+CUqs1I1dTqW081rauSf+LE4GfgacxbiU7XgQWmg6OCDzuJJJXSaonjtEerL7suEP9DrhIt7VaZZbGTy5p/Jug33WvuT8P0vzkJS+1752BBPevg++dafIsaBEGNc3IhOvBnZXawuVnhgKhYPhw5SNQPc3DJS9/TQxXWyMy9PnrsRgaR4JvivNjHzVmobkAAAAASUVORK5CYII=" />
+        <h3>Web Design</h3><br>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga architecto eligendi, praesentium natus odit
+          iusto voluptates aliquid ipsa ut explicabo et exercitationem totam at. Laboriosam magni quam, distinctio quasi
+          doloribus nulla. Numquam sed sequi quae tempore atque odio? Consequatur, expedita similique ullam dolore quod
+          rem culpa perspiciatis iusto labore. Possimus eos vero magnam dolor
+        </p>
+      </div>
+      <div class="ser">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA5dJREFUSEvFl2fIjlEYx3+vUVayR8kmMj4oq5RVilCSlS1kU1JEyhaSlcjKKDtkfjCysks+oGTvnVlknX9dt85zO89zP4/eeq8v73nOfc71P9d1/ud/XW8eBWR5BYRLrsCFgVZATaCqHfoZcB+4DPzMNpBsgesB04AeQJk0zt8C+4AFwL2kAyQBlwAWAmMARZuNfQcWA7MBjYOWCbgGcBhoFNj5GVAW5PgOUC6w5grQ1R36VQg5HXBD4Jzn8DRwAxhvTsYCq23cF9huY83VBTrZ76dAa+BxHDwEXAXQaasBv4HhwEbgFtDA7k/R/jJn8nEdaArctAwNAja5dBeyOYF/9MFDwDvd4t4GOhjYCjQDrtnG0cCaWAR+1G2BM+4K+rvot9m65cCkTMBNLKVas8Gi1XiWi3Am8AMoC+iOfSsGvHdE1N8dQD/7KB/D3Iv4BtQCnkeb4hFvdqlUmgRQx216ZAtPAe0sEkUUsl1AL+ATUNoWiKB37UXMB6aHgIsC74BSwEGgu3eHX4DiQMrmGPo4YKXNSVxe2Fgvo4uxv34IuCNw3D6IvatsXAl4meF+I1/+/g6AsiSb6ERnmY0FrOeXIplDjIma171IBmW6G7FaNgM4nybVOqCIKVtiGqCxwNbafDfgUBx4CrAojdP8mhazxfCUiCfbSfMLJORHGEvjwP5b9FNd3aVbbJfNAU6mOVkFJx67A6mubU9Tn/oAYn9KxCp3F2yj1EpvUFYeeGNjXYfuL2RtgLP2obMrn8c8X+ts3Nzp99U4sKqPnoBOrghFtmjNVxMHabF0OmRDPRKKkA9sUaQNqtuRDP/TCIh9I02ZlKLXtlmZUEak4S3SAEtaB9geMVxW2QSkpL3xCdHeuHKJ+rftCtYDI2zhCqtM6jDUCMQlU37UCEhOdYe6S5kKhTKngiIljLIQbH0k7BJ4meRTkfjioAISkSgKQCp3wH5Ip6XXA4EtNqdMjvIzFapOFa1/Ul+lk+r0+023JYWXLO2+HzG9vem01qge77GyqHKqsvghCVjfVW8veo3AEbs7lUmZtPeojSWPJ2ysNIukPe23CNXSVbkncV5kan0UsYpF4wCZ5FBdikBU/NU8xE31WxL5txRmE3G0Rmyc66qW2KhuIhtTH6YGcd7/Nns+iFqeqdbeRrU2fgixeq+VzodJJ0xqb+P7ixhRJKN+Q69irzce9WFJuDn/J5HoMNsFuUacrd/EdX8AF1i0Hzzzo+MAAAAASUVORK5CYII=" />
+        <h3>Web Development</h3><br>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga architecto eligendi, praesentium natus odit
+          iusto voluptates aliquid ipsa ut explicabo et exercitationem totam at. Laboriosam magni quam, distinctio quasi
+          doloribus nulla. Numquam sed sequi quae tempore atque odio? Consequatur, expedita similique ullam dolore quod
+          rem culpa perspiciatis iusto labore. Possimus eos vero magnam dolor
+        </p>
+      </div>
+      <div class="ser">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAuJJREFUSEvFlkmoSGEUx3/PkLBBhgwJmZIkFjLFQpmyIEMWUlakJGWeZWnOUMpCSJmHIqJQFoaiLIwLJJQhsjBkOv/Xua/P7V73fvf1emd37zf8z3fO//zPqaGRrKaRcKkK3AoYD7QHTgPvYx9QFfgCMNHBPgCdgF8x4FWAWwKfgeYB0BjgRkMCC2wFsCkFcgJYEBPymBdPBnYC36GWG20dvClwBxgJrAP2Aj+LXp8FrH+zHeAs0BPYBQyzyzYANz2sfYHXwD1gG/DOHdP5+cBVYBQwGDgMfAqdyQJeG4TyOdDVwA96iEWk635pEu7RwHGgF/ADWASsB94A/RxMTowrAn5qHvYONi0Btvv3NH9VH3PkW7DnGPDEQrzG/w0F7qbC3dki8Tb5l35xEw9Zu+DQDEDkEbEeA6vtJUdTl3YHHgCDgBeAQJSGxH7bHQOBh3nA+q/DCmcb4KRtnuU1ugyYCgzPIc5mQHmf6eurPORyeA5wpCjUWp9k5FppuVT+ZB2AZ4Dq9X4OsNRMnJhi4nLL98gZAS9Pn8krpzTwfqAFMLegTLS+GBhir/0D1At4gEXgtoVKhBJTi0zltRs4UF/ga1aPV/ySIlCtq97PAz2svJTnqFCrASjHW60B7HMRkWKVNRHppZMyGljyp7JY6gJRFlT7dE51fcrTI33/x7LIpXq7CHQzFfrojFYdxprUbLoLzbx07WcBS13UXxNT2FRKMabwKr+JyXGRVAJUa1nAjwKN1R4pkGQ0xuR4/9QBaUHdpJIFLElU/cnUUVqnmsT/HGjmTUJd7Ku1yI6++RIwITxY1BbPeVkkbVGEE8uzxhx1nz3AK1cqNYkRLiaHfGqpw44dBOSAutIOayYLgS7AFh8C1CgkjZfL5CQGWPeJNKrvjanLFVr1Z8lkKYsF1qVqBsp9OOyN9Y5WCjSP1WUOh+PtF5+/Gny8TV6dDPRnfHgo43AlckVdXLS5So6L7iy1/hfRfo4f+b8l3gAAAABJRU5ErkJggg==" />
+        <h3>Graphic Design</h3><br>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga architecto eligendi, praesentium natus odit
+          iusto voluptates aliquid ipsa ut explicabo et exercitationem totam at. Laboriosam magni quam, distinctio quasi
+          doloribus nulla. Numquam sed sequi quae tempore atque odio? Consequatur, expedita similique ullam dolore quod
+          rem culpa perspiciatis iusto labore. Possimus eos vero magnam dolor
+        </p>
+      </div>
+      <div class="ser">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA0xJREFUSEvFlknIT1EYxn+fOUqSkpQhQ4iNzDJli9gYEmJhzqxMCzMRhSgLU8mYlGGnzJmJhSFTMoVsyJD5PP/eU+c7373/e6/Nd1bn3vec87zT875vBdW0KqoJl6LANYFeQCugmSn9BngOXAd+5zUkL3A7YDEwAmiU8vhH4DiwDniWpUAWcH1gPTAdkLV51g9gI7AS0D5xlQOWO08Cne3mX+Cre7QBcB4YaP/PAQNMJkX9kuuHAe+SkNOAOwKXgMZ26QIwE9hmIEnA+rcM2AO0tXuvLSdexeBJwE2BW0BzO7zB4vvHWemtC4HPmvWSDXIxrgusBuZaeB4A3YEvIXgS8CFglB1aDqwILnhgeWCK/d8J9I/cL9FSU0D7LcCccsBdgHt24DQwJHKRB04KW+gFyWs5FtwFOjklfhoFRb3Sii3e56gwHpBbRaGQFuOAXUDtlERVBk8EDgTyHsA1+15rXqgCXAf4ADQEPruMvB0B9HMUqWFFYjtw0eTKaNFNMoFfie51MyY8MWOqAA8GzqRY43+rMqly3YzO9TUWZFynPfA4dvUEF4e9dvOyo8Yv29cDetp+KzA75XWFYZLJ5N7vtlespZjWUOBUDLzAKo7+y20qGFpy1Q3bjwSOpgCPCeLbFbhj55QTvoLNslpQKbnmAZvssMqjEiwGHg0cTgGW7KDJ0oDnuxzaHFscXlTV8p0mdPUOl4AzUoDF58kJrpbFfey/6sORGFhJE2dkjCEvKN5xculhZblCVG6pgpXuhjzW/j3QxMpb/HhvQJRT0olOql6yRjSbloNOahbq4aXciQtI6C5ZEXpAhWV3mfao6qSs3h+YrDfEEK1KjIiB1VUemfbim1pi2FOLlEx55z7QxvKlNfDSK5XUJKTxWDugaWJJYEGRJqGuttDuypNTw+AnASvG4q0GAcVDPXgR8C2lLcatUoOCJhAB6f2HlpCfsoAlV4O4GgwCGuZU2VZlDAJqoRoEWhqIupFYkGsQ8IrJ4hOAWqVfauZFRp/hrm+/TeJX1rAnEE0TKnVZHPXvKxk1IK7532EvVLSDxVnjrdpm0tJ4e8xxXX33RUYhKTzQq9OokLSIBvqnlpC+vmfhFgbOfDDvgawY532n8Ll/E7u5H7gTcJIAAAAASUVORK5CYII=" />
+        <h3>App Design</h3><br>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga architecto eligendi, praesentium natus odit
+          iusto voluptates aliquid ipsa ut explicabo et exercitationem totam at. Laboriosam magni quam, distinctio quasi
+          doloribus nulla. Numquam sed sequi quae tempore atque odio? Consequatur, expedita similique ullam dolore quod
+          rem culpa perspiciatis iusto labore. Possimus eos vero magnam dolor
+        </p>
+      </div>
+      <div class="ser">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAXtJREFUSEvll70uRUEQx3/XI2glvmrCG+ARUEg0NHpR+7h4AGqtEFEpVYLQEhEtUXsAHw37T+4mm5s9Z8eek5yb3OnuyX/nNzO7O7O3RUPWaohLz4IV2CQwWLEyb8B76KMs4yHgEpioCPXLj4EV4FcfysBHwFpNUO9mHrhIga+AOeAJWM8IYLWTYbh0B9hLga+BGQe/AWYzwG1XVoFC23U/9D1a6hFgDDgEpiIZfwGPwHciGDN4ADgFlgzZfbiAtF/3JVozeBk4MUC9RHs/XQd425VeeyDToSoyf2h0LVSlIjNnHArLrlmOzgcXPVw5Dq0B1gJW1NqW1HWsvdT9B1bL22qi1P0H3gc2myh1eKo1uYpsFNDACW0DOOi+h+G9860z5lQjUuPyv/bZec28doPDXm1xql59axECginTZ68PW57G4ZnRkWQvVd5jIViT5txFtWiAax4vAHcGbVQSa/LjwHCJQ71AHoCfXGiqyVfxm1zbs/8kkpHnCv4A5OpdHwlmzyAAAAAASUVORK5CYII=" />
+        <h3>App Development</h3><br>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga architecto eligendi, praesentium natus odit
+          iusto voluptates aliquid ipsa ut explicabo et exercitationem totam at. Laboriosam magni quam, distinctio quasi
+          doloribus nulla. Numquam sed sequi quae tempore atque odio? Consequatur, expedita similique ullam dolore quod
+          rem culpa perspiciatis iusto labore. Possimus eos vero magnam dolor
+        </p>
+      </div>
+      <div class="ser">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAQpJREFUSEvt1rtNBDEQxvHfERNQAY8iyKEEEpBILoQqeDWBRIYQJCR0AB1cTsCjBRJCOJ9sabEQ60Ne7SHWoXf0/Wc+rWdmpKcz6olrocBr2KjsxDNem5rNipdwg73K0CR3hTE+wkUTvI/rjqBJdgd3OfhomshpjNiunMB91DvGWQ4+mdoQPuT3NXKY2RsLC5wvVg/gGhYnjcHq4ef6x+84tc5aTyp1xKD7Y+eqBcx1Fgt8iPOuSo26B7jIh8QKJljvCP6ITbx9N/6WsYvVFnhILmwT4VzipSX+Cbd4T3G/Xfa2kIZ7WBoe5nXpT4DTaGsrrqiYoqBI6g086zgFpyhunooLmOUhvYE/ASB3QB91bnTyAAAAAElFTkSuQmCC" />
+        <h3>SEO</h1><br>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga architecto eligendi, praesentium natus odit
+            iusto voluptates aliquid ipsa ut explicabo et exercitationem totam at. Laboriosam magni quam, distinctio
+            quasi doloribus nulla. Numquam sed sequi quae tempore atque odio? Consequatur, expedita similique ullam
+            dolore quod rem culpa perspiciatis iusto labore. Possimus eos vero magnam dolor
+          </p>
+      </div><br><br><br><br><br>
+
+    </div>
+  </div>
+
+  <div class="contact" id="contact">
+    <div class=" txt-col">
+      <h1>Contact Me</h1><br><br>
+    </div>
+    <div class="contact-text">
+      <h2>Have you any question?</h2><br>
+      <h5>I'M AT YOUR SERVICES</h5><br><br><br><br>
+      <div class="home-sci">
+        <a href="https://www.facebook.com/profile.php?id=100071544116248" class="bx bxl-facebook-circle"></a>
+        <a href="" class="bx bxl-instagram-alt"></a>
+        <a href="" class="bx bxl-twitter"></a>
+        <a href="" class="bx bxl-linkedin"></a>
+      </div>
+    </div><br><br>
+    <div class="contact-options">
+      <div class="icons">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAaFJREFUSEvFl88rBVEUxz9P+bUTVpKsFWWjRKz8B8pKNhZixdYCZc9OskGyY8XGxkLZWUiSrBQlv4p/gHvqTo1p7tx75s2YU1PvzZt7Pud77jln7qtRkdUq4pIFHgHGgOaCgvsE9oAv8ecCrwIrBQHjbuaBrSzwO9BRAnjN+BRRTsU/JUDFZSHgY+AEeAMGgSWgzRNw3eBFA9lMQDqBa6ArA54K7gXkEjvPWHwDDDh+nwb2teDQSpaqlOpMM1H7XBZ4G5hzOG8HPrTg0FTfAv2mz9Mqfxi41ILjz/vaSSp4IwFoBc6AUS04VHHk9wg4NWl/sRlYAHrytFNocdUzW1LbqTJwaKrvgEPgCpDPMtf7bLrHzb0poMmRllyT69uMR9nHA0+uZZ9liEgQSVNPrlf7br4P3OAGMwV3AZlkcVPv8aRJpVSxxlqAB6A7tkgFfrJt4uvttKCWgXUf2FVcFzbNGrXRsxN2qETfVcX1aPcrD1jEzPgUa0ZmniBkjUpxXkjaOi+4ssPeDjBbpFTry3u8bbSVPPTfB/oSxP51Wdl/p19hb10fnjDZeQAAAABJRU5ErkJggg==" />
+        Call me: 9860303030
+      </div>
+      <div class="icons">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAcpJREFUSEvt1s+LTlEcx/HXyI8lJQvJj39Amo1kY8POj9KUFAs2UtOkbPxYIMRCEQs7JVNSUn7szGJ2lIWFLGVSspAFm2kQzlfn6rh55j7zuD3P5rmrc8/9ns/7ez/ne36MGNAzMiCuIbhvztetPoIT2NByBjM4j1uVbgnehumWgXW5zXgRnSX4FC7myHMtJ3Am653E5Tr4LKqAg5hsCX4Ad4ofCs5ff1yC49tNHMPXHhNYims4WowPJxvBEf8Su/B+gfA1eIzR2rhGcNgcFsXzCfvxtEv4DtzFyhxfav0THPP724Y8BRO4kgpuCX7k+Y/i+9khgSjU02lsiC9K7W84nhK4UYzpChz6W/AIqzJsCmP4XIMvx31sz/0fsBfP83uVbKPV5TJbjQc5idB5h514lUU34knaHNbl94DtxsciuZ7AMX4xrmI8i82lBA7nduxGy3L7erb3e82RnsGVzj7cLkBV/ywO4V6H+f9vcOhuSsvkIdZnyJu07Pbg9TxV3wo49FcgbI1qj+r/0rDUWgN3uaT/hA3BfT8W4+i9VG2N1UT04yKwFc/q4HiPIywO67ULrZ6G+LdpE7rQ6erTMmt+ueG9um92D8zqXxs3ZB/GykYiAAAAAElFTkSuQmCC" />
+        Email me: joshisaroj431@gmail.com
+      </div>
+      <div class="icons">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAoBJREFUSEvl1k3IT3kUB/DP02SIjEgWNkiUWJC31WAii9kYLIjFzAijLLyWms2MlZJppogwYTNEXrKwUTLYmCSUl2RBXhs1MhuZobhH56nrP8/93/s8pafMqX/3/v739zvf8/I95/w69JJ09BKungKPxDdp9IHi/V53Hegp8CycTbAv8PtHCfwpZmM+5mFYevkUJ3EcZ/CqifdNQz0JxzCqRuldLCwMu1IH3gR4NX5Gn1T2HFdxI9cTMLHYMyjX/2ItdrUDrwMO0B2p4DHW4GiFwsXYXuwfmt/j7M4q8HbA43EZfXETc/CkJoSRishzPF9iSiky7x2tAu6f4RyDB5iKP/PkksKA7zA9139gNw7mOmr8UnoeBk9OIxoBf41oDCFfJWvjfRs2VHj9Ezbmt5VpTCzD0EOtZ6o83odvM7TDS57+VhPqpel5pOcvDEgDVrUDjhDFL2R/vu9FWB9yDjNqgM8XHW1m7jmFL3GnpCNa67v2Wvb4R/zQongLvs//gizhSTv5B/1ywy9ZBeX9m4tF4NQCl/PWXeA4u77Fyi6By6Heg2D0ESzqYaij0y3AbXTmuMtQl43rZO/fGFyk4E2ysym5PsEzfIat2NSU1eWx18nUONu0nJYjiBkShLzQFDhIFyz+HI8wrWBmtMyQugYyGhezgcScjnn9H2nXMqPt3Uomx3MuHtaweixOF+U4Ai8wDve7Cxz7gxSdUyb69LpC2eEKB5ZlPofk9xX4tcrQuukU57oaizFvr+eojGESY3FggrzO+q2cTK113C6KTS8CUS7R26/VpKRbt8yqq09Mrbj6nPgQV59WB/4ft8yy1712oa/jTu33JuVUq6QnG94CC0iEHwzVWo8AAAAASUVORK5CYII=" />
+        Address: Kathmandu, Nepal
+      </div>
+      <div class="icons">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAA5dJREFUSEvFl2fIjlEYx3+vUVayR8kmMj4oq5RVilCSlS1kU1JEyhaSlcjKKDtkfjCysks+oGTvnVlknX9dt85zO89zP4/eeq8v73nOfc71P9d1/ud/XW8eBWR5BYRLrsCFgVZATaCqHfoZcB+4DPzMNpBsgesB04AeQJk0zt8C+4AFwL2kAyQBlwAWAmMARZuNfQcWA7MBjYOWCbgGcBhoFNj5GVAW5PgOUC6w5grQ1R36VQg5HXBD4Jzn8DRwAxhvTsYCq23cF9huY83VBTrZ76dAa+BxHDwEXAXQaasBv4HhwEbgFtDA7k/R/jJn8nEdaArctAwNAja5dBeyOYF/9MFDwDvd4t4GOhjYCjQDrtnG0cCaWAR+1G2BM+4K+rvot9m65cCkTMBNLKVas8Gi1XiWi3Am8AMoC+iOfSsGvHdE1N8dQD/7KB/D3Iv4BtQCnkeb4hFvdqlUmgRQx216ZAtPAe0sEkUUsl1AL+ATUNoWiKB37UXMB6aHgIsC74BSwEGgu3eHX4DiQMrmGPo4YKXNSVxe2Fgvo4uxv34IuCNw3D6IvatsXAl4meF+I1/+/g6AsiSb6ERnmY0FrOeXIplDjIma171IBmW6G7FaNgM4nybVOqCIKVtiGqCxwNbafDfgUBx4CrAojdP8mhazxfCUiCfbSfMLJORHGEvjwP5b9FNd3aVbbJfNAU6mOVkFJx67A6mubU9Tn/oAYn9KxCp3F2yj1EpvUFYeeGNjXYfuL2RtgLP2obMrn8c8X+ts3Nzp99U4sKqPnoBOrghFtmjNVxMHabF0OmRDPRKKkA9sUaQNqtuRDP/TCIh9I02ZlKLXtlmZUEak4S3SAEtaB9geMVxW2QSkpL3xCdHeuHKJ+rftCtYDI2zhCqtM6jDUCMQlU37UCEhOdYe6S5kKhTKngiIljLIQbH0k7BJ4meRTkfjioAISkSgKQCp3wH5Ip6XXA4EtNqdMjvIzFapOFa1/Ul+lk+r0+023JYWXLO2+HzG9vem01qge77GyqHKqsvghCVjfVW8veo3AEbs7lUmZtPeojSWPJ2ysNIukPe23CNXSVbkncV5kan0UsYpF4wCZ5FBdikBU/NU8xE31WxL5txRmE3G0Rmyc66qW2KhuIhtTH6YGcd7/Nns+iFqeqdbeRrU2fgixeq+VzodJJ0xqb+P7ixhRJKN+Q69irzce9WFJuDn/J5HoMNsFuUacrd/EdX8AF1i0Hzzzo+MAAAAASUVORK5CYII=" />
+        Website: www.sarojjoshi.com
+      </div>
+
+    </div>
+    <br><br><br>
+
+    <br><br><br>
+    <div class="form">
+      <form action="" method="post">
+        <input type="text" placeholder="Name" id="fullName" onclick="fullNameValidation()"
+          onkeyup="fullNameValidation()">
+        <span id="fullNameError"></span>
+        <input type="text" placeholder="Email" id="email" onclick="emailValidation()" onkeyup="emailValidation()">
+        <span id="emailError"></span>
+        <input type="text" placeholder="Subject">
+        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+        <input type="submit" value="Send Message" onclick="submitted()">
+      </form>
+      <span id="messageAfterSubmission"></span>
+
+    </div>
+  </div>
+
+
+  <div class="portfolio" id="portfolio">
+    <div class="txt-col">
+      <h1>Portfolio</h1>
+    </div>
+    <div class="services-grid">
+      <div class=" port">
+        <img class="ser-image" height="300px" width="300px"
+          src="https://i0.wp.com/curiositygym.com/wp-content/uploads/2022/05/portfolio1.jpg?fit=1024%2C576&ssl=1" />
+        <h3>Web Design</h3>
+
+      </div>
+      <div class="port">
+        <img class="ser-image" height="300px" width="300px"
+          src="https://cdn1.vectorstock.com/i/1000x1000/41/20/online-shop-website-landing-page-design-vector-24954120.jpg" />
+        <h3>Shopping website</h3>
+
+
+      </div>
+      <div class="port">
+        <img class="ser-image" height="300px" width="300px"
+          src="https://media.www.kent.ac.uk/se/20823/portfolio-banner_1920w.jpg" />
+        <h3>Web Design</h3>
+
+      </div>
+      <div class=" port">
+        <img class="ser-image" height="300px" width="300px"
+          src="https://i0.wp.com/curiositygym.com/wp-content/uploads/2022/05/portfolio1.jpg?fit=1920%2C1080&ssl=1" />
+        <h3>Remote Learning web App</h3>
+
+      </div>
+      <div class="port">
+        <img class="ser-image" height="300px" width="300px"
+          src="https://morweb.org/get/files/image/galleries/college_websites_University_of_Washington_(1).png" />
+        <h3>University Website </h3>
+
+
+      </div>
+      <div class="port">
+        <img class="ser-image" height="300px" width="300px"
+          src="https://edtechteacher.org/wp-content/uploads/2017/01/5-Things-to-include-in-Digital-Portfolio-EdTechTeacher.png" />
+        <h3>Web Design</h3>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    function submitted() {
+      document.getElementById("messageAfterSubmission").innerHTML = "Thank you for your message. I will get back to you soon.";
+    }
+    let count = 0;
+    function showMenu() {
+      count++;
+      if (count % 2 == 0) {
+        document.getElementById("NAVBAR").style.display = "none";
+        document.querySelector("#Container").style.marginTop = "0px";
+
+      }
+      else {
+        document.getElementById("NAVBAR").style.display = "block";
+        document.querySelector("#Container").style.marginTop = "100px";
+      }
+    }
+    function fullNameValidation() {
+      let fullName = document.getElementById("fullName").value;
+      let pattern = /^[a-zA-Z]{3,15}$/;
+      document.getEl
+      if (fullName == "") {
+      display("fullNameError", "Name is required", "red");
+      }
+      else if (!fullName.match(pattern)) {
+        display("fullNameError", "Name is invalid", "red");
+      }
+      else {
+        document.getElementById("fullNameError").innerHTML = "";
+      }
+    }
+    function emailValidation() {
+      let email = document.getElementById('email').value;
+      pattern = /[a-z]{1}[a-z0-9.]{3,12}[@]{1}[a-z]{4,}[.]{1}[a-z.]{3,}/
+      if (email == "") {
+        display("emailError", "Email is required", "red");
+      }
+      else if (!pattern.test(email)) {
+        display("emailError", "Email is invalid", "red");
+      }
+      else {
+        display("emailError", "Email is valid", "green");
+      }
+
+    }
+    function display(id, message, color) {
+
+      document.getElementById("fullNameError").innerHTML = message;
+      document.getElementById("fullNameError").style.color = color;
+    }
+  </script>
+</body>
+
+</html>
