@@ -156,13 +156,16 @@
       color: #000;
     }
 
-    .content h1 span {
+    .content h1 .spans {
       font-weight: 600;
       letter-spacing: 1x;
       font-size: 40px;
       animation: col 4s infinite;
 
 
+    }
+    #type{
+      color: blue;
     }
 
 
@@ -669,10 +672,10 @@
 
   <div class="container" id="Container">
     <div class="content">
-      <h1>Hello, my Name is <span>Saroj Joshi</span></h1>
-      <h1>I am a.....</h1>
+      <h1>Hello, my Name is <span class="spans">Saroj Joshi</span></h1>
+      <h1>I am a <strong><span id="type"></span></strong></h1>
       <p>
-        I'm a web Designer with experience for over 2 years. My expertise is
+        with experience for over 2 years. My expertise is
         to create and website design, graphic design, and many more...
       </p>
       <br /><br />
@@ -1078,6 +1081,15 @@
       document.getElementById("fullNameError").innerHTML = message;
       document.getElementById("fullNameError").style.color = color;
     }
+  </script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>>
+  <script>
+    var typed = new Typed('#type', {
+  strings: ['Web Developer', 'Graphic Designer', 'App Developer', 'Freelancer'],
+  typeSpeed: 100,
+  backSpeed: 30,
+  loop: true
+});
   </script>
 </body>
 
